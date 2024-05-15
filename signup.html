@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-box">
+            <h1>Sign Up</h1>
+            <div class="textbox">
+                <input type="text" placeholder="Username" id="username">
+            </div>
+            <div class="textbox">
+                <input type="password" placeholder="Password" id="password">
+            </div>
+            <div class="textbox">
+                <input type="password" placeholder="Confirm Password" id="confirmPassword">
+            </div>
+            <div class="textbox">
+                <input type="email" placeholder="Email" id="email">
+            </div>
+            <div class="textbox">
+                <input type="tel" placeholder="Phone Number" id="phone">
+            </div>
+            <div id="driverFields" style="display: none;">
+                <div class="textbox">
+                    <input type="text" placeholder="Address" id="address">
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Vehicle Type" id="vehicleType">
+                </div>
+            </div>
+            <div id="userFields">
+                <!-- Add any additional fields for user signup here -->
+            </div>
+            <div class="user-type">
+                <input type="radio" id="user" name="userType" value="user" checked onchange="toggleSignupFields()">
+                <label for="user">User</label>
+                <input type="radio" id="driver" name="userType" value="driver" onchange="toggleSignupFields()">
+                <label for="driver">Driver</label>
+            </div>
+            <button class="btn" onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleSignupFields() {
+            const userType = document.querySelector('input[name="userType"]:checked').value;
+            const userFields = document.getElementById('userFields');
+            const driverFields = document.getElementById('driverFields');
+            if (userType === 'user') {
+                userFields.style.display = 'block';
+                driverFields.style.display = 'none';
+            } else {
+                userFields.style.display = 'none';
+                driverFields.style.display = 'block';
+            }
+        }
+
+        function signup() {
+            // Your signup logic here
+        }
+    </script>
+</body>
+</html>

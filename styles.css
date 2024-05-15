@@ -1,0 +1,162 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for all forms and dashboard */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    
+}
+
+/* Page title styling */
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for the user type radio buttons */
+.user-type {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.user-type input {
+    display: none;
+}
+
+.user-type label {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-type input:checked + label {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Styling for the form input fields */
+.textbox {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.textbox input:focus {
+    border-color: #007bff;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Styling for links */
+p {
+    margin-top: 20px;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Index page specific styling */
+.index-box {
+    width: 100%;
+}
+
+.index-box .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.index-box .btn {
+    width: 45%;
+}
+
+/* Dashboard specific styling */
+.dashboard-box {
+    position: relative;
+    text-align: center;
+}
+
+.dashboard-box p {
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.dashboard-box button {
+    width: 50%;
+    margin-top: 20px;
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: -76px;
+    right: -100px;
+    background: transparent;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
